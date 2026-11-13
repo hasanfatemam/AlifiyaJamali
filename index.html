@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirty &amp; Thriving — Happy 30th Birthday, Alifiya!</title>
+    <meta
+      name="description"
+      content="A magical, cinematic 30th birthday tribute website celebrating Alifiya with surprise video, reels, memory gallery, heartfelt messages, and friendship games."
+    />
+    <meta property="og:title" content="Thirty & Thriving — Happy 30th Birthday, Alifiya!" />
+    <meta
+      property="og:description"
+      content="Celebrating 30 years of magic, laughter, and unforgettable memories with Alifiya."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#060b18" />
+
+    <!-- Elegant Editorial Serif + Modern Sans-Serif (2-Font Rule) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Relative path for full GitHub Pages compatibility -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="entry-locked">
+    <!-- Ambient Celestial Starfield & Celebration Confetti Layers -->
+    <canvas id="celestial-canvas" aria-hidden="true"></canvas>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+    <!-- Background Music Players (YouTube IFrame + Local MP3 Fallback) -->
+    <div id="yt-music-player" class="yt-music-hidden" aria-hidden="true"></div>
+    <audio id="bg-music" loop preload="metadata">
+      <source src="./assets/music/birthday-melody.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- =========================================================
+         HOMEPAGE: THE GRAND ENTRY
+         ========================================================= -->
+    <section
+      id="grand-entry"
+      class="grand-entry"
+      aria-label="Alifiya 30th Birthday Grand Entry"
+    >
+      <div class="entry-backdrop" aria-hidden="true">
+        <img
+          src="./assets/images/hero-soiree.jpg"
+          alt=""
+          referrerpolicy="no-referrer"
+          class="entry-backdrop-img"
+        />
+        <div class="entry-scrim"></div>
+      </div>
+
+      <button
+        id="entry-music-btn"
+        type="button"
+        class="music-btn entry-music-btn"
+        aria-pressed="false"
+        aria-label="Toggle birthday background music"
+      >
+        <svg
+          id="entry-music-icon-play"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+        <svg
+          id="entry-music-icon-pause"
+          class="hidden"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="6" y="4" width="4" height="16" />
+          <rect x="14" y="4" width="4" height="16" />
+        </svg>
+        <span id="entry-music-label">Play Music</span>
+      </button>
+
+      <div class="entry-content">
+        <p class="entry-kicker">Celebrating Three Radiant Decades · Alifiya</p>
+
+        <!-- Animated Milestone 30 & Countdown Transition -->
+        <div class="milestone-stage" aria-live="polite">
+          <svg
+            class="milestone-fireworks"
+            viewBox="0 0 240 240"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="120"
+              cy="120"
+              r="98"
+              stroke="url(#goldRing)"
+              stroke-width="1"
+              stroke-dasharray="4 8"
+            />
+            <circle
+              cx="120"
+              cy="120"
+              r="112"
+              stroke="url(#roseRing)"
+              stroke-width="0.75"
+              stroke-dasharray="2 12"
+            />
+            <g class="spark-rays">
+              <line x1="120" y1="8" x2="120" y2="24" />
+              <line x1="120" y1="216" x2="120" y2="232" />
+              <line x1="8" y1="120" x2="24" y2="120" />
+              <line x1="216" y1="120" x2="232" y2="120" />
+              <line x1="41" y1="41" x2="53" y2="53" />
+              <line x1="187" y1="187" x2="199" y2="199" />
+              <line x1="199" y1="41" x2="187" y2="53" />
+              <line x1="53" y1="187" x2="41" y2="199" />
+            </g>
+            <defs>
+              <linearGradient id="goldRing" x1="0" y1="0" x2="240" y2="240">
+                <stop offset="0%" stop-color="#f2d699" stop-opacity="0.85" />
+                <stop offset="50%" stop-color="#e0a399" stop-opacity="0.45" />
+                <stop offset="100%" stop-color="#e5c180" stop-opacity="0.85" />
+              </linearGradient>
+              <linearGradient id="roseRing" x1="240" y1="0" x2="0" y2="240">
+                <stop offset="0%" stop-color="#f2b8c6" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#e5c180" stop-opacity="0.2" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div class="milestone-number-wrap">
+            <span id="entry-countdown" class="milestone-number tabular-nums">27</span>
+          </div>
+          <p id="entry-countdown-caption" class="milestone-caption">
+            Counting up to a luminous new chapter…
+          </p>
+        </div>
+
+        <h1 class="entry-title">THIRTY &amp; THRIVING</h1>
+        <p class="entry-subtitle">Happy 30th Birthday, Alifiya!</p>
+        <p class="entry-lead">
+          Memories, laughter, heartfelt wishes, and little surprises crafted
+          especially for your milestone year.
+        </p>
+
+        <div class="entry-actions">
+          <button
+            id="enter-celebration-btn"
+            type="button"
+            class="btn-primary btn-entry"
+          >
+            <span>ENTER THE CELEBRATION</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         STICKY NAVIGATION HEADER (3-Zone Top Bar Contract)
+         ========================================================= -->
+    <header id="site-header" class="site-header" aria-label="Primary Navigation">
+      <div class="header-inner">
+        <!-- Zone 1: Single-line Brand Wordmark -->
+        <a href="#top" id="brand-home-link" class="brand-wordmark">
+          Alifiya · 30
+        </a>
+
+        <!-- Zone 2: 5 Single-Line Navigation Links -->
+        <nav class="desktop-nav" aria-label="Celebration Sections">
+          <a href="#surprise" class="nav-link" data-section="surprise">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <polygon points="6 3 20 12 6 21 6 3" />
+            </svg>
+            <span>Birthday Surprise</span>
+          </a>
+          <a href="#reels" class="nav-link" data-section="reels">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="6" y="2" width="12" height="20" rx="3" />
+              <polygon points="10 9 15 12 10 15 10 9" />
+            </svg>
+            <span>Watch the Reels</span>
+          </a>
+          <a href="#photographs" class="nav-link" data-section="photographs">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <circle cx="9" cy="10" r="2" />
+              <path d="m21 15-4.5-4.5a2 2 0 0 0-2.8 0L6 18" />
+            </svg>
+            <span>Our Photographs</span>
+          </a>
+          
+          <a href="#games" class="nav-link" data-section="games">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 2 14.8 8.2 21.5 9l-5 4.6 1.4 6.7L12 17l-5.9 3.3 1.4-6.7-5-4.6 6.7-.8Z" />
+            </svg>
+            <span>Friendship Games</span>
+          </a>
+        </nav>
+
+        <!-- Zone 3: 1 Primary Action (Music Toggle) + Mobile Drawer Trigger -->
+        <div class="header-actions">
+          <button
+            id="music-toggle-btn"
+            type="button"
+            class="music-btn"
+            aria-pressed="false"
+            aria-label="Toggle birthday background music"
+          >
+            <svg
+              id="music-icon-play"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
+            <svg
+              id="music-icon-pause"
+              class="hidden"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+            <span id="music-btn-label">Play Music</span>
+          </button>
+
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="hamburger-btn"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+            aria-label="Open navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <nav id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation" hidden>
+        <a href="#surprise" class="mobile-nav-link" data-section="surprise">01 · Birthday Surprise</a>
+        <a href="#reels" class="mobile-nav-link" data-section="reels">02 · Watch the Reels</a>
+        <a href="#photographs" class="mobile-nav-link" data-section="photographs">03 · Our Photographs</a>
+        <a href="#messages" class="mobile-nav-link" data-section="messages">04 · Birthday Messages</a>
+        <a href="#games" class="mobile-nav-link" data-section="games">05 · Friendship Games</a>
+      </nav>
+    </header>
+
+    <!-- =========================================================
+         MAIN CELEBRATION EXPERIENCE
+         ========================================================= -->
+    <main id="main-experience" class="main-experience">
+      <div id="top"></div>
+
+      <!-- -------------------------------------------------------
+           SECTION 1: BIRTHDAY SURPRISE – WATCH THE VIDEO
+           ------------------------------------------------------- -->
+      <section id="surprise" class="celebration-section section-reveal">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-meta">Chapter 01 · Birthday Tribute Film</p>
+            <h2 class="section-title">A Little Surprise, Just For You!</h2>
+            <p class="section-lead">
+              Pour a glass, turn up your volume, and press play on a film made with love from
+              the people who cherish you most.
+            </p>
+          </div>
+
+          <div class="video-showcase-card">
+            <div class="video-frame" id="surprise-video-frame">
+              <video
+                id="surprise-video"
+                class="surprise-video-el"
+                src="./assets/videos/birthday-surprise.mp4"
+                playsinline
+                preload="metadata"
+                poster="./assets/thumbnails/surprise-poster.jpg"
+              >
+                Your browser does not support HTML5 video playback.
+              </video>
+
+              <!-- Poster & Central Play Trigger Overlay -->
+              <div id="video-poster-overlay" class="video-poster-overlay">
+                <img
+                  src="./assets/thumbnails/surprise-poster.jpg"
+                  alt="Alifiya's 30th birthday video surprise thumbnail"
+                  referrerpolicy="no-referrer"
+                  class="video-poster-img"
+                />
+                <div class="video-poster-scrim"></div>
+                <div class="video-poster-center">
+                  <button
+                    id="video-big-play-btn"
+                    type="button"
+                    class="big-play-btn"
+                    aria-label="Play birthday surprise video"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <polygon points="7 4 20 12 7 20 7 4" />
+                    </svg>
+                  </button>
+                  <button id="play-surprise-cta" type="button" class="btn-primary">
+                    Play My Surprise
+                  </button>
+                </div>
+              </div>
+
+              <!-- Fallback Notice if Video Fails to Load -->
+              <div id="video-fallback-note" class="video-fallback-note" hidden>
+                <p>
+                  Unable to play <code>assets/videos/birthday-surprise.mp4</code>. Please make
+                  sure the file exists and is encoded as MP4 (H.264).
+                </p>
+              </div>
+            </div>
+
+            <!-- Custom Luxury Video Controls -->
+            <div class="video-controls-bar" aria-label="Video player controls">
+              <div class="controls-left">
+                <button
+                  id="video-play-pause-btn"
+                  type="button"
+                  class="ctrl-btn"
+                  aria-label="Play or pause video"
+                >
+                  <svg id="ctrl-play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <polygon points="6 4 20 12 6 20 6 4" />
+                  </svg>
+                  <svg id="ctrl-pause-icon" class="hidden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <rect x="6" y="4" width="4" height="16" />
+                    <rect x="14" y="4" width="4" height="16" />
+                  </svg>
+                </button>
+
+                <button
+                  id="video-replay-btn"
+                  type="button"
+                  class="ctrl-btn"
+                  aria-label="Replay video from start"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                    <path d="M3 3v5h5" />
+                  </svg>
+                </button>
+
+                <span id="video-time-readout" class="time-readout tabular-nums">
+                  00:00 / 00:00
+                </span>
+              </div>
+
+              <div class="progress-wrap">
+                <input
+                  id="video-seek-bar"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  step="0.1"
+                  class="seek-slider"
+                  aria-label="Video progress"
+                />
+              </div>
+
+              <div class="controls-right">
+                <button
+                  id="video-mute-btn"
+                  type="button"
+                  class="ctrl-btn"
+                  aria-label="Mute or unmute video"
+                >
+                  <svg id="ctrl-vol-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  </svg>
+                  <svg id="ctrl-vol-off" class="hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <line x1="23" y1="9" x2="17" y2="15" />
+                    <line x1="17" y1="9" x2="23" y2="15" />
+                  </svg>
+                </button>
+
+                <button
+                  id="video-fullscreen-btn"
+                  type="button"
+                  class="ctrl-btn"
+                  aria-label="Toggle fullscreen video"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <polyline points="15 3 21 3 21 9" />
+                    <polyline points="9 21 3 21 3 15" />
+                    <line x1="21" y1="3" x2="14" y2="10" />
+                    <line x1="3" y1="21" x2="10" y2="14" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------
+           SECTION 2: WATCH THE REELS (Vertical 9:16 Showcase)
+           ------------------------------------------------------- -->
+      <section id="reels" class="celebration-section section-reveal">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-meta">Chapter 02 · Short Motion Keepsakes</p>
+            <h2 class="section-title">Watch the Reels</h2>
+            <p class="section-lead">
+              Bite-sized moments, candid laughs, and celebratory toasts — tap any vertical reel
+              to open the theatre view.
+            </p>
+          </div>
+
+          <div id="reels-grid" class="reels-grid"></div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------
+           SECTION 3: OUR PHOTOGRAPHS – A MEMORY GALLERY
+           ------------------------------------------------------- -->
+      <section id="photographs" class="celebration-section section-reveal">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-meta">Chapter 03 · Curated Photo Archive</p>
+            <h2 class="section-title">Our Photographs</h2>
+          </div>
+
+          <!-- Interactive Category Filter Tabs -->
+          <div
+            id="photo-filter-bar"
+            class="filter-bar"
+            role="tablist"
+            aria-label="Filter photographs by category"
+          >
+            <button type="button" class="filter-tab active" data-category="all" role="tab" aria-selected="true">
+              All Memories
+            </button>
+            <button type="button" class="filter-tab" data-category="The Beautiful Memories" role="tab" aria-selected="false">
+              The Beautiful Memories
+            </button>
+            <button type="button" class="filter-tab" data-category="Crazy Moments" role="tab" aria-selected="false">
+              Crazy Moments
+            </button>
+            <button type="button" class="filter-tab" data-category="Adventures Together" role="tab" aria-selected="false">
+              Adventures Together
+            </button>
+            <button type="button" class="filter-tab" data-category="Unforgettable Days" role="tab" aria-selected="false">
+              Unforgettable Days
+            </button>
+          </div>
+
+          <div id="photo-grid" class="photo-grid"></div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------
+           SECTION 4: BIRTHDAY MESSAGES
+           ------------------------------------------------------- -->
+      <section id="messages" class="celebration-section messages-section section-reveal">
+        <div id="hearts-layer" class="hearts-layer" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section-header">
+            <p class="section-meta">Chapter 04 · Love Notes &amp; Wishes</p>
+            <h2 class="section-title">30 Years of Magic. A Lifetime of Memories.</h2>
+            <p class="section-lead">
+              Words written from the heart by the friends who have walked beside you through
+              every season.
+            </p>
+          </div>
+
+          <div id="messages-grid" class="messages-grid"></div>
+
+          <!-- Special Final Tribute Message -->
+          <article class="final-tribute-card">
+            <p class="final-tribute-kicker">A Toast To Your Thirties</p>
+            <blockquote class="final-tribute-quote">
+              “Here's to 30 years of beautiful memories and a million more moments waiting to
+              happen. Keep shining, keep laughing and keep being wonderfully YOU!”
+            </blockquote>
+            <p class="final-tribute-signoff">— With endless love on your 30th birthday</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------
+           SECTION 5: FRIENDSHIP GAMES
+           ------------------------------------------------------- -->
+      <section id="games" class="celebration-section section-reveal">
+        <div class="container">
+          <div class="section-header">
+            <p class="section-meta">Chapter 05 · Interactive Play</p>
+            <h2 class="section-title">Friendship Games</h2>
+            <p class="section-lead">
+              Three playful birthday challenges dedicated to Alifiya’s favourite things, inside
+              jokes, and iconic moments.
+            </p>
+          </div>
+
+          <!-- Game Switcher Tabs -->
+          <div class="game-tabs" role="tablist" aria-label="Select a friendship game">
+            <button
+              type="button"
+              class="game-tab active"
+              data-game="quiz"
+              role="tab"
+              aria-selected="true"
+            >
+              01 · How Well Do You Know Alifiya?
+            </button>
+            <button
+              type="button"
+              class="game-tab"
+              data-game="memory"
+              role="tab"
+              aria-selected="false"
+            >
+              02 · Memory Match
+            </button>
+            <button
+              type="button"
+              class="game-tab"
+              data-game="this-or-that"
+              role="tab"
+              aria-selected="false"
+            >
+              03 · This or That
+            </button>
+          </div>
+
+          <!-- Game 1: Quiz -->
+          <div id="game-quiz" class="game-panel active" role="tabpanel">
+            <div id="quiz-container" class="game-card"></div>
+          </div>
+
+          <!-- Game 2: Memory Match -->
+          <div id="game-memory" class="game-panel" role="tabpanel" hidden>
+            <div class="game-card">
+              <div class="memory-toolbar">
+                <div class="memory-stats">
+                  <span class="stat-item">Moves: <strong id="memory-moves" class="tabular-nums">0</strong></span>
+                  <span class="stat-sep" aria-hidden="true">·</span>
+                  <span class="stat-item">Pairs: <strong id="memory-pairs" class="tabular-nums">0 / 8</strong></span>
+                  <span class="stat-sep" aria-hidden="true">·</span>
+                  <span class="stat-item">Time: <strong id="memory-timer" class="tabular-nums">00:00</strong></span>
+                </div>
+                <button id="memory-reset-btn" type="button" class="btn-secondary">
+                  Restart Board
+                </button>
+              </div>
+
+              <div id="memory-board" class="memory-board" aria-label="Memory match card grid"></div>
+
+              <div id="memory-win-banner" class="memory-win-banner" hidden>
+                <h3>Flawless Memory!</h3>
+                <p id="memory-win-summary"></p>
+                <button id="memory-play-again-btn" type="button" class="btn-primary">
+                  Play Again
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Game 3: This or That -->
+          <div id="game-this-or-that" class="game-panel" role="tabpanel" hidden>
+            <div id="tot-container" class="game-card"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-heart" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </div>
+        <p class="footer-line-main">Made With Love, Laughter &amp; A Thousand Memories.</p>
+        <p class="footer-line-sub">Celebrating Alifiya's Fabulous 30!</p>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+         REELS THEATRE MODAL (9:16 Vertical Viewer)
+         ========================================================= -->
+    <div
+      id="reel-modal"
+      class="modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Reel video player"
+      hidden
+    >
+      <div class="reel-modal-shell">
+        <button
+          id="reel-modal-close"
+          type="button"
+          class="modal-close-btn"
+          aria-label="Close reel viewer"
+        >
+          ✕
+        </button>
+
+        <button
+          id="reel-prev-btn"
+          type="button"
+          class="modal-nav-btn modal-nav-prev"
+          aria-label="Previous reel"
+        >
+          ‹
+        </button>
+
+        <div class="reel-player-stage" id="reel-player-stage">
+          <video
+            id="reel-modal-video"
+            class="reel-modal-video"
+            playsinline
+            loop
+            preload="metadata"
+          ></video>
+
+          <div class="reel-stage-overlay" id="reel-stage-overlay">
+            <button
+              id="reel-stage-play-btn"
+              type="button"
+              class="reel-play-indicator"
+              aria-label="Play or pause reel"
+            >
+              <svg id="reel-play-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <polygon points="7 4 20 12 7 20 7 4" />
+              </svg>
+              <svg id="reel-pause-svg" class="hidden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <rect x="6" y="4" width="4" height="16" />
+                <rect x="14" y="4" width="4" height="16" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="reel-stage-scrim">
+            <div class="reel-stage-top">
+              <span id="reel-modal-meta" class="reel-modal-meta">Reel 01 / 04</span>
+              <button
+                id="reel-mute-btn"
+                type="button"
+                class="reel-mini-btn"
+                aria-label="Mute or unmute reel"
+              >
+                Unmuted
+              </button>
+            </div>
+            <div class="reel-stage-bottom">
+              <h3 id="reel-modal-title" class="reel-modal-title"></h3>
+              <p id="reel-modal-caption" class="reel-modal-caption"></p>
+              <div class="reel-progress-track">
+                <div id="reel-progress-fill" class="reel-progress-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          id="reel-next-btn"
+          type="button"
+          class="modal-nav-btn modal-nav-next"
+          aria-label="Next reel"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         PHOTOGRAPHY FULL-SCREEN LIGHTBOX
+         ========================================================= -->
+    <div
+      id="photo-lightbox"
+      class="modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photograph lightbox"
+      hidden
+    >
+      <div class="lightbox-shell">
+        <button
+          id="lightbox-close"
+          type="button"
+          class="modal-close-btn"
+          aria-label="Close photograph viewer"
+        >
+          ✕
+        </button>
+
+        <button
+          id="lightbox-prev"
+          type="button"
+          class="modal-nav-btn modal-nav-prev"
+          aria-label="Previous photograph"
+        >
+          ‹
+        </button>
+
+        <figure class="lightbox-figure">
+          <img
+            id="lightbox-img"
+            src=""
+            alt=""
+            referrerpolicy="no-referrer"
+            class="lightbox-img"
+          />
+          <figcaption class="lightbox-caption-bar">
+            <div>
+              <p id="lightbox-meta" class="lightbox-meta"></p>
+              <h3 id="lightbox-title" class="lightbox-title"></h3>
+              <p id="lightbox-caption" class="lightbox-caption"></p>
+            </div>
+            <span id="lightbox-counter" class="lightbox-counter tabular-nums">1 / 8</span>
+          </figcaption>
+        </figure>
+
+        <button
+          id="lightbox-next"
+          type="button"
+          class="modal-nav-btn modal-nav-next"
+          aria-label="Next photograph"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <!-- Relative path for full GitHub Pages compatibility -->
+    <script defer src="./script.js"></script>
+  </body>
+</html>
